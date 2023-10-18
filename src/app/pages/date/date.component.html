@@ -1,0 +1,34 @@
+<button type="button" routerLink="/pages">BACK</button>
+
+
+<br>
+
+
+<!-- <div class=" container> -->
+<table class="table">
+    <thead>
+        Date and Time Picker
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date"
+                        [formControl]="dateControl" [min]="minDate" [max]="maxDate" [disabled]="disabled">
+                    <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+
+                    <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
+                        [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond" [touchUi]="touchUi"
+                        [color]="color" [enableMeridian]="enableMeridian">
+                    </ngx-mat-datetime-picker>
+
+                </mat-form-field>
+                <button type="button" (click)="selecteddate()">save</button>
+            </td>
+        </tr>
+
+
+    </tbody>
+</table>
+
+<!-- </div> -->

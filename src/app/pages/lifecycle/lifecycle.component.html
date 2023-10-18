@@ -1,0 +1,25 @@
+<!-- <div class="container-fluid m-2"><button type="button"  routerLink="/pages">Back</button></div> -->
+
+<div class="child">
+    child is working
+    <span> {{data}}</span>
+
+    <br> <br> <br> <br> <br>
+
+    <p>
+        id: {{details.id}} <br>
+        name:{{details.name}}
+    </p>
+
+    <ng-content></ng-content>
+    <br>
+
+
+    <P>afterview checked
+
+        <button type="button" (click)="afterviewchecked()">checked</button><br>
+        <span>{{viewchecked}}</span>
+
+    </P>
+</div>
+

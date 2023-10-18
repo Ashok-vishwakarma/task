@@ -1,0 +1,53 @@
+<div class="container">
+    <span>Angular Reactive Form</span>
+    <form [formGroup]="login" (ngSubmit)="submitdetail()">
+        <div class="row">
+
+            <div >
+                <label><b>Name</b><span class="text-danger">*</span></label><br>
+                <mat-form-field>
+                    <input matInput placeholder="Full Name" formControlName="name">
+                    <mat-error> enter your name </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div >
+                <label><b>Username</b><span class="text-danger">*</span></label><br>
+                <mat-form-field>
+                    <input matInput placeholder="username" formControlName="Username">
+                    <mat-error> Enter your Username</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div >
+                <label><b>Pancard</b><span class="text-danger">*</span></label><br>
+                <mat-form-field>
+                    <input matInput placeholder="Ba56d803HU" formControlName="pancard">
+                    <mat-error> pancard details</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div >
+                <!-- <label><b>aadhar Card</b><span class="text-danger">*</span></label><br> -->
+                <mat-form-field>
+                    <mat-label>aadhar Card</mat-label>
+                    <input matInput placeholder="1234 5678 8908" formControlName="aadharcard">
+                    <mat-error *ngIf="login.controls['aadharcard']?.errors?.required"> aadharcard details</mat-error>
+                    <mat-error *ngIf="login.controls['aadharcard']?.errors?.pattern"> pancard dfgjklfd</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div >
+                <label><b>phone Number</b><span class="text-danger">*</span></label><br>
+                <mat-form-field>
+                    <input matInput placeholder="+91 2345-2345-23" formControlName="number">
+                    <mat-error> Enter your number</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onsubmit()">submit</button>
+    </form>
+</div>
+
+
+

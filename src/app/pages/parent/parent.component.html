@@ -1,0 +1,13 @@
+<div class="container-fluid m-2">
+    <button type="button"  routerLink="/pages">Back</button>
+</div>
+
+<p>parent works!</p>
+<button type="button" (click)="counter()"  #reff>counter</button>
+<app-lifecycle [data]="count" [details]="object">
+    <app-adress [adress]="adre"></app-adress>
+</app-lifecycle>
+
+<br><br><br><br><br>
+
+using for ngdestroy {{value}}

@@ -1,0 +1,30 @@
+<div class="container back_button">
+  <button type="button" routerLink="/pages">BACK</button>
+</div>
+
+<br><br><br><br>
+<!-- <mat-chip-grid #chipGrid aria-label="Fruit selection">
+    <mat-chip-row *ngFor="let fruit of fruits" (removed)="remove(fruit)">
+        {{providers.value }}
+        <button matChipRemove [attr.aria-label]="'remove ' + fruit">
+            <mat-icon>cancel</mat-icon>
+        </button>
+    </mat-chip-row>
+</mat-chip-grid>  -->
+
+
+
+<div class="container ">
+  <mat-form-field>
+    <mat-label>Toppings</mat-label>
+
+
+    <mat-select [formControl]="toppings" multiple>
+      <mat-option *ngFor="let topping of toppingList" [value]="topping" (click)="topic(topping)">
+        
+          {{topping}}
+        
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

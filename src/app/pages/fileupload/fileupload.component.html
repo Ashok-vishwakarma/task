@@ -1,0 +1,27 @@
+<button type="button" routerLink="/pages">BACK</button>
+
+
+<div class="container">
+    <div class="text">File Upload App</div>
+    <div class="body">
+        <mat-form-field class="mb-3 col-12">
+            <mat-label>Attach File*</mat-label>
+            <input matInput [value]="imageName" readonly />
+            <input type="file" #fileInput accept="image/*" (change)="previewImages($event)"  multiple />
+
+
+
+        </mat-form-field>
+
+        <div id="imagePreview">
+            <div class="images" *ngFor="let imageUrl of imageUrls ; let i=index">
+                <img  alt="" [src]="imageUrl">
+                <button type="button" (click)="delete(i)">X</button>
+            </div>
+        </div>
+        <button class="submit" type="button" class="btn-primary"> upload</button>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,68 @@
+.button {
+    background: #0000FF;
+    color: #fff;
+    border: hidden;
+    border-radius: 4px;
+    height: 2em;
+    width: 5em
+}
+
+.submit {
+    margin-top: 15em;
+}
+
+.images {
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+
+    button {
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        font-size: 11px;
+        border-radius: 50px;
+        border: 1px solid #f00;
+        background: #f00;
+        color: #fff;
+        padding: 0 7px;
+    }
+
+    img {
+        height: 100px;
+        border: 1px dashed #ddd;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.body {
+    padding: 4em;
+}
+
+.text {
+    height: 2em;
+    background: #0000FF;
+    width: 100%;
+    color: #fff;
+    font-weight: 800;
+    padding-left: 4em;
+    padding-top: 4px;
+    width: 100%;
+}
+
+.container {
+    padding: 5em 10em 0 10em;
+}
