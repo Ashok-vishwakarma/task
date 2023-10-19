@@ -8,8 +8,8 @@
     <div class="body">
         <mat-form-field class="mb-3 col-12">
             <mat-label>Attach File*</mat-label>
-            <input matInput  readonly />
             <input type="file" #fileInput accept="image/*" (change)="previewImages($event)" [value]="imageName" readonly multiple />
+            <input matInput  readonly />
 
 
 

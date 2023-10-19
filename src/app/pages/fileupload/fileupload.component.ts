@@ -27,13 +27,14 @@ export class FileuploadComponent implements OnChanges , OnInit {
 
   }
 
-  @ViewChild('fileInput') fileInput!: ElementRef;
+  // @ViewChild('fileInput') fileInput!: ElementRef;
 
 
   img: any = []
   imageName: any = '';
   imageUrls: string[] = [];
-  seleetcedFile: any = []
+  seleetcedFile: any = [];
+  
   // openFiles() {
   //   this.fileInput.nativeElement.click();
   // }
