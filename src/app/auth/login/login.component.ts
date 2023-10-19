@@ -12,28 +12,48 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  login:any
+  login: any;
+  displayCustomErrorMessage: boolean = false;
 
-  constructor(private router:Router , private fb:FormBuilder){}
+  constructor(private router: Router, private fb: FormBuilder) { }
   ngOnInit(): void {
-   
-  this.login=this.fb.group({
-    'name': ['', Validators.required],
-    'Username': ["",Validators.required],
-    'pancard': [ "",Validators.compose([Validators.pattern("[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}$")]),],
-    'aadharcard': ["",Validators.required,],
-    'number': ["",Validators.required],
-  })
+
+    this.login = this.fb.group({
+      name: ['', Validators.compose([Validators.required])],
+      Username: ['', Validators.compose([Validators.required])],
+      pancard: ['',Validators.compose([Validators.required,Validators.pattern(/^[A-Z]{5}[0-9]{4}[A-Z]$/)])],
+      aadharcard: ['', Validators.compose([Validators.required,Validators.pattern(/^\d{12}$/)])],
+      number: ['', Validators.compose([Validators.required,Validators.pattern(/^\d{10}$/)])],
+    })
 
 
   }
 
-  submitdetail(){
-    console.log(this.login.value)
+  // submitdetail() {
+  //   console.log(this.login.value)
+  // }
+
+  // onsubmit() {
+  //   this.router.navigate(['/pages'])
+  // }
+
+
+  submitdetail() {
+  }
+  displayAadhaarErrorMessage() {
+    if (this.login.get('aadharcard').invalid) {
+      
+      this.displayCustomErrorMessage = true;
+    } else {
+      this.displayCustomErrorMessage = false;
+    }
+    
   }
 
-  onsubmit(){
-    this.router.navigate(['/pages'])
-  }
 
+  onsubmit() {
+    
+    console.log(this.login.value);
+    this.router.navigate(['/pages']);
+  }
 }

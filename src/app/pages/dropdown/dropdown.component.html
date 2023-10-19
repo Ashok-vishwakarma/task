@@ -1,12 +1,34 @@
+<app-loader *ngIf="service.isLoading$ | async"></app-loader>
 <p>
     <mat-toolbar color="primary">
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
       </button>
-      <button type="button" routerLink="lifecycle">hoooks</button>
+      <!-- <button type="button" routerLink="lifecycle">hoooks</button> -->
       <button type="button" routerLink="date">D&T</button>
       <button type="button" routerLink="multitasking">Dropdown</button>
       <button type="button" routerLink="fileupload">fileupload</button>
       <button type="button" routerLink="parent">lifecycle</button>
     </mat-toolbar>
   </p>
+
+
+
+  <br>
+  <hr>
+
+
+<pre>dummy api with loader</pre> <br>
+
+<button type="button" (click)="submit()">get</button>
+
+<br>
+
+<pre> dummy api in which loader  will not work </pre>
+<button type="button" (click)=" photos()">Hit</button>
+
+<br>
+
+<button type="button" (click)="getLeaderBoardList()">getLeaderBoardList</button>
+
+

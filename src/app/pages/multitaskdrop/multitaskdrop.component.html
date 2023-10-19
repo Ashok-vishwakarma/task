@@ -20,7 +20,7 @@
 
 
     <mat-select [formControl]="toppings" multiple>
-      <mat-option *ngFor="let topping of toppingList" [value]="topping" (click)="topic(topping)">
+      <mat-option *ngFor="let topping of toppingList" [value]="topping" (click)="topic(topping)" >
         
           {{topping}}
         
@@ -28,3 +28,7 @@
     </mat-select>
   </mat-form-field>
 </div>
+
+<!-- <div class="">
+  <p-multiSelect [options]="cities" [(ngModel)]="selectedCities" defaultLabel="Select a City" optionLabel="name" display="chip"></p-multiSelect>
+</div> -->

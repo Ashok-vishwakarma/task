@@ -10,9 +10,11 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    
    
   ],
   imports: [
@@ -25,6 +27,7 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

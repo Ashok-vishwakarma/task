@@ -15,14 +15,9 @@ export class MultitaskdropComponent implements OnInit {
   selectedItems: any = [];
   settings = {};
 
-
   constructor() { }
 
-  ngOnInit(): void {
-
-
-
-  }
+  ngOnInit(): void {}
 
 
 

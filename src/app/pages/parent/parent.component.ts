@@ -1,18 +1,12 @@
 import { AfterViewChecked, AfterViewInit, Component, DoCheck, ElementRef, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { DetailsModel } from 'src/app/shared/models/details.model';
 import { LifecycleComponent } from '../lifecycle/lifecycle.component';
-import { Observable } from 'rxjs';
-
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.scss']
 })
 export class ParentComponent implements OnInit, OnChanges, AfterViewInit, AfterViewChecked , OnDestroy {
-  
- 
-
-
 
   @ViewChild('reff') reffbutton!: ElementRef       //afterviewinit
   @ViewChild(LifecycleComponent) lifecycle!: LifecycleComponent   //ngAfterViewChecked
@@ -36,14 +30,12 @@ export class ParentComponent implements OnInit, OnChanges, AfterViewInit, AfterV
     this.adre += 1;
   }
 
-
   obseravleData() {
     this.setinterval=setInterval(() => {
       this.value ++
       console.log(this.value)
-    }, 1000)
+    }, 10000)
   }
-
 
   ngOnChanges(changes: SimpleChanges): void {
 
@@ -54,7 +46,6 @@ export class ParentComponent implements OnInit, OnChanges, AfterViewInit, AfterV
     console.log(this.reffbutton + '  afterviewinit')
   }
 
-
   ngAfterViewChecked() {
     console.log(this.lifecycle.viewchecked + ' viewchecked working')
   }
@@ -62,6 +53,5 @@ export class ParentComponent implements OnInit, OnChanges, AfterViewInit, AfterV
   ngOnDestroy(){
     clearInterval(this.setinterval)
   }
-
 
 }

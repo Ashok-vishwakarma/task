@@ -10,31 +10,22 @@ import { DetailsModel } from 'src/app/shared/models/details.model';
 export class LifecycleComponent implements OnInit , OnChanges , DoCheck , AfterContentInit , AfterContentChecked{
  
   @ContentChild(AdressComponent) anyyname!:AdressComponent;
-
   @Input() data:number | undefined
   @Input() details!:DetailsModel 
   
   viewchecked:number=0;
 
-  
   constructor(){
     console.log("constructor is working")
   }
-
 
   afterviewchecked(){
     this.viewchecked+=1
   }
 
-
-
- 
-  
-
   ngOnChanges(changes: SimpleChanges) {
     console.log(this.data+ "  ngOnChanges is working")
   }
-
 
   ngOnInit() {
     console.log(this.data+"  ngOnInit is working ")
@@ -48,19 +39,8 @@ export class LifecycleComponent implements OnInit , OnChanges , DoCheck , AfterC
     console.log(this.anyyname?.adress+ "  aftercontentinit is working")
   }
 
-
   ngAfterContentChecked(): void {
     console.log(this.anyyname?.adress +"  ngAfterContentChecked is working")
   }
-
-
- 
-
-
-
-
-
-
-
 
 }
