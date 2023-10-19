@@ -1,34 +1,32 @@
 <app-loader *ngIf="service.isLoading$ | async"></app-loader>
-<p>
-    <mat-toolbar color="primary">
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <!-- <button type="button" routerLink="lifecycle">hoooks</button> -->
-      <button type="button" routerLink="date">D&T</button>
-      <button type="button" routerLink="multitasking">Dropdown</button>
-      <button type="button" routerLink="fileupload">fileupload</button>
-      <button type="button" routerLink="parent">lifecycle</button>
-    </mat-toolbar>
-  </p>
+<app-overlay *ngIf="service.isLoading$ | async"></app-overlay>
+<!-- <app-header></app-header> -->
 
 
-
-  <br>
-  <hr>
-
-
-<pre>dummy api with loader</pre> <br>
-
-<button type="button" (click)="submit()">get</button>
-
-<br>
-
-<pre> dummy api in which loader  will not work </pre>
-<button type="button" (click)=" photos()">Hit</button>
-
-<br>
-
-<button type="button" (click)="getLeaderBoardList()">getLeaderBoardList</button>
+<div>
+  <mat-toolbar color="primary" >
+    <button class="header-option" mat-raised-button  type="button" routerLink="date">D&T</button>
+    <button class="header-option" mat-raised-button  type="button" routerLink="multitasking">Dropdown</button>
+    <button class="header-option" mat-raised-button  type="button" routerLink="fileupload">fileupload</button>
+    <button class="header-option" mat-raised-button  type="button" routerLink="parent">lifecycle</button>
+  </mat-toolbar>
+</div>
 
 
+<hr>
+
+
+<div class="row container ">
+
+  <div class="col-6">
+    <h4>dummy api with loader</h4> <br>
+    <!-- <button >api call</button> -->
+    <button mat-stroked-button color="primary" type="button" (click)="submit()">api call</button>
+  </div>
+
+  <div class="col-6 ">
+    <h4> dummy api in which loader will not work </h4> <br>
+    <button mat-stroked-button color="primary" type="button" (click)="getLeaderBoardList()">api call-2</button>
+  </div>
+
+</div>

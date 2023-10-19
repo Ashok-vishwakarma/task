@@ -52,7 +52,7 @@ export class MultitaskdropComponent implements OnInit {
   topic(topping: any) {
     console.log(topping)
     this.topicArray.push(topping)
-    console.log(this.topicArray)
+    // console.log(this.topicArray)
   }
 
 

@@ -1,4 +1,6 @@
-<button type="button" routerLink="/pages">BACK</button>
+<!-- <app-header></app-header> -->
+
+<button class="header-option btn" mat-raised-button  type="button" routerLink="/pages">BACK</button>
 
 
 <div class="container">
@@ -6,8 +8,8 @@
     <div class="body">
         <mat-form-field class="mb-3 col-12">
             <mat-label>Attach File*</mat-label>
-            <input matInput [value]="imageName" readonly />
-            <input type="file" #fileInput accept="image/*" (change)="previewImages($event)"  multiple />
+            <input matInput  readonly />
+            <input type="file" #fileInput accept="image/*" (change)="previewImages($event)" [value]="imageName" readonly multiple />
 
 
 

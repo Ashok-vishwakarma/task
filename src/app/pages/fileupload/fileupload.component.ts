@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -6,13 +6,32 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './fileupload.component.html',
   styleUrls: ['./fileupload.component.scss']
 })
-export class FileuploadComponent {
+export class FileuploadComponent implements OnChanges , OnInit {
+  ngOnInit(): void {
+    this.seleetcedFile
+    this.imageName
+    this.imageUrls
+    console.log(this.imageName)
+    console.log(this.imageUrls)
+    console.log(this.seleetcedFile)
+
+  }
+
+  ngOnChanges() {
+    this.seleetcedFile
+    this.imageName
+    this.imageUrls
+    console.log(this.imageName)
+    console.log(this.imageUrls)
+    console.log(this.seleetcedFile)
+
+  }
 
   @ViewChild('fileInput') fileInput!: ElementRef;
 
 
   img: any = []
-  imageName: any = [];
+  imageName: any = '';
   imageUrls: string[] = [];
   seleetcedFile: any = []
   // openFiles() {
@@ -23,6 +42,11 @@ export class FileuploadComponent {
   delete(i: number) {
     this.imageUrls.splice(i, 1)
     this.seleetcedFile.splice(i, 1)
+
+    console.log(this.imageName )
+    console.log(this.imageUrls)
+    console.log(this.seleetcedFile)
+  
   }
 
 
@@ -30,6 +54,7 @@ export class FileuploadComponent {
     this.imageUrls = []; // Clear any previous previews
 
     const input = event.target;
+    
     const files = input.files;
 
     for (let i = 0; i < files.length; i++) {
@@ -40,12 +65,17 @@ export class FileuploadComponent {
 
         reader.onload = (e: any) => {
           this.imageUrls.push(e.target.result); // Add the data URL to the array
+          
+          console.log(this.imageUrls)
         };
 
         reader.readAsDataURL(file); // Read the image file as a data URL
         this.seleetcedFile.push(file)
+      
+        console.log(this.seleetcedFile)
       }
     }
+
   }
 
 

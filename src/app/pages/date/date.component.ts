@@ -13,7 +13,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class DateComponent implements OnInit {
 
   constructor() { }
-
+  selecteddatee:any
 
   @ViewChild('picker') picker: any;
 
@@ -31,6 +31,7 @@ export class DateComponent implements OnInit {
   public color: ThemePalette = 'primary';
   optionss:any;
   endDate:any;
+  
 
 
   ngOnInit(): void {
@@ -67,8 +68,8 @@ export class DateComponent implements OnInit {
 
 
   selecteddate() {
-    const selecteddate = this.dateControl.value;
-    console.log(selecteddate)
+    this.selecteddatee = this.dateControl.value;
+    console.log(this.selecteddatee)
 
   }
 

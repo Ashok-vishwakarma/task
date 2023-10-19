@@ -15,6 +15,10 @@ export class LoaderserviceService {
   hide() {
     this.isLoading$.next(false);
   }
+
+
+
+  
  baseUrl='https://jsonplaceholder.typicode.com'
   
 

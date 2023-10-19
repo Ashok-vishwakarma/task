@@ -1,34 +1,39 @@
-<button type="button" routerLink="/pages">BACK</button>
+<!-- <app-header></app-header> -->
+
+<button class="header-option btn" mat-raised-button type="button" routerLink="/pages">BACK</button>
 
 
 <br>
 
 
-<!-- <div class=" container> -->
-<table class="table">
-    <thead>
-        Date and Time Picker
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <mat-form-field>
-                    <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date"
-                        [formControl]="dateControl" [min]="minDate" [max]="maxDate" [disabled]="disabled">
-                    <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+<div class="container page">
+    <table class="table">
+        <thead>
+            Date and Time Picker (user can select date only 5 days after today&#39;s date)
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <mat-form-field>
+                        <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date"
+                            [formControl]="dateControl" [min]="minDate" [max]="maxDate" [disabled]="disabled">
+                        <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
 
-                    <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
-                        [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond" [touchUi]="touchUi"
-                        [color]="color" [enableMeridian]="enableMeridian">
-                    </ngx-mat-datetime-picker>
+                        <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
+                            [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
+                            [touchUi]="touchUi" [color]="color" [enableMeridian]="enableMeridian">
+                        </ngx-mat-datetime-picker>
 
-                </mat-form-field>
-                <button type="button" (click)="selecteddate()">save</button>
-            </td>
-        </tr>
+                    </mat-form-field>
+                    <button id="date-save" mat-raised-button type="button" (click)="selecteddate()">save</button>
+                </td>
+            </tr>
 
 
-    </tbody>
-</table>
+        </tbody>
+    </table>
 
-<!-- </div> -->
+    <div class="container">
+        <h4>{{selecteddatee}}</h4>
+    </div>
+</div>
