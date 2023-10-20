@@ -22,6 +22,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { LoaderserviceService } from '../shared/loaderservice.service';
 import { InterceptorInterceptor } from '../shared/interceptor.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FileUploadModule } from 'primeng/fileupload';
 
 
 
@@ -77,6 +78,7 @@ const routes: Routes = [
     MatButtonModule,
     SharedModule,
     FormsModule,
+    FileUploadModule,
     MatFormFieldModule,
     ReactiveFormsModule,
     MatSelectModule,

@@ -1,18 +1,21 @@
 <!-- <app-header></app-header> -->
 
-<button class="header-option btn" mat-raised-button  type="button" routerLink="/pages">BACK</button>
+<button class="header-option" mat-raised-button  type="button" routerLink="/pages">BACK</button>
 
 
 <div class="container">
     <div class="text">File Upload App</div>
     <div class="body">
-        <mat-form-field class="mb-3 col-12">
+        <mat-form-field class="mb-3 col-12  inp">
             <mat-label>Attach File*</mat-label>
-            <input type="file" #fileInput accept="image/*" (change)="previewImages($event)" [value]="imageName" readonly multiple />
             <input matInput  readonly />
-
-
-
+            <div class="im_count">
+                <label class="btn btn-primary" for="uploadFile">Upload File +</label>
+                <span>{{ imageUrls.length }} Files</span>
+                <input type="file" id="uploadFile" name="uploadFile" accept="image/*" (change)="previewImages($event)" [value]="imageName" multiple />
+            </div>
+            
+            <!-- <label for="fileCount"></label> -->
         </mat-form-field>
 
         <div id="imagePreview">
@@ -21,9 +24,13 @@
                 <button type="button" (click)="delete(i)">X</button>
             </div>
         </div>
-        <button class="submit" type="button" class="btn-primary"> upload</button>
+        <!-- <button class="submit" type="button" class="btn-primary"> upload</button> -->
     </div>
 </div>
 
+<!-- {{fileCountElement}}files -->
 
+
+
+<hr>
 

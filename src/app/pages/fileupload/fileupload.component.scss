@@ -45,7 +45,9 @@
 
 
 
-
+.header-option {
+    margin: 2em;
+}
 
 
 .body {
@@ -67,10 +69,21 @@
     padding: 5em 10em 0 10em;
 }
 
-.btn{
-    margin: 2em;
+.inp {
+    position: relative;
+
+    span {
+        margin-left: 10px;
+        font-size: larger;
+    }
 }
 
+// #fileCount{
+//     // display: none;
 
 
+// }
 
+#uploadFile {
+    display: none;
+}

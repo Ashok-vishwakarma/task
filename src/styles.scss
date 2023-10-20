@@ -5,3 +5,33 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
+.mat-datepicker-content {
+    // padding-top: 60px;
+    // border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 0 5px 0px #ddd;
+}
+
+.mat-datepicker-content-container {
+    // display: flex;
+    flex-direction: row !important;
+    // justify-content: space-between;
+    align-items: center;
+}
+
+.mat-calendar-body-cell-content {
+    border: unset !important;
+}
+
+.mat-calendar-body-cell-content:hover{
+    background: #ddd;
+    border-radius:50px ;
+}
+
+.mat-calendar-body-selected {
+    background: #ddd !important;
+}
+
+.mat-calendar-body-disabled {
+    opacity: 0.3;
+}
