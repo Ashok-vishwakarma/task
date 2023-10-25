@@ -29,25 +29,12 @@ export class LoginComponent implements OnInit {
 
   }
 
-  
- 
   aplhabetsOnly(event: any) {                                                 //it will accept only character
     let text = event.target as HTMLInputElement;
     let value = text.value.replace(/[^A-Za-z]/g, '');
     text.value = value
     return text.value
   }
-
-
-  // displayAadhaarErrorMessage() {
-  //   if (this.login.get('aadharcard').invalid) {
-
-  //     this.displayCustomErrorMessage = true;
-  //   } else {
-  //     this.displayCustomErrorMessage = false;
-  //   }
-
-  // }
 
   panOnly(event:any){
     let text = event.target as HTMLInputElement;
@@ -66,10 +53,9 @@ export class LoginComponent implements OnInit {
   }
 
 
-
-
   onsubmit() {
     console.log(this.login.value);
     this.router.navigate(['/pages']);
   }
+  
 }

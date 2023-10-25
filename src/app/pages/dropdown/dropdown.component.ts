@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LoaderserviceService } from 'src/app/shared/loaderservice.service';
 
 
@@ -7,9 +7,18 @@ import { LoaderserviceService } from 'src/app/shared/loaderservice.service';
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss']
 })
-export class DropdownComponent {
+export class DropdownComponent implements OnInit {
     
   constructor(public service:LoaderserviceService){}
+  ngOnInit(){
+    console.log(document.head)
+    console.log(document.childNodes)
+    console.log(document.firstChild)
+    console.log(document.lastModified)
+    console.log(document.lastElementChild)
+    const aa= new Array
+    console.log(aa)
+  }
 
 
   submit(){

@@ -48,7 +48,7 @@
             <label><b>Aadhar Card</b><span class="text-danger">*</span></label><br />
             <mat-form-field>
               <mat-label>Aadhar Card</mat-label>
-              <input matInput placeholder="1234 5678 8908" formControlName="aadharcard" (input)="aadharOnly($event)" />
+              <input matInput placeholder="1234 5678 8908" formControlName="aadharcard" (input)="aadharOnly($event)" >
               <mat-error *ngIf="login.controls['aadharcard']?.errors?.required">
                 Enter the aadhar card details</mat-error>
               <mat-error *ngIf="login.controls['aadharcard']?.errors?.pattern">
